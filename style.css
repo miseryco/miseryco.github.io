@@ -1,0 +1,50 @@
+@font-face {
+	font-family: 'Scilla';
+	src: url('./scilla-regular-webfont.woff2') format('woff2'),
+	     url('./scilla-regular-webfont.woff') format('woff'),
+	     url('./scilla-regular-webfont.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+}
+html {
+	background: #0F2027;
+	background: -webkit-linear-gradient(330deg, #2e2020, #22110c, #0f0904, #0f0904);
+	background: linear-gradient(330deg, #2e2020, #22110c, #0f0904, #0f0904);
+	height: 100%;
+}
+body {
+	color: rgba(255, 255, 255, 0.85);
+	font: 60px Scilla, serif;
+	font-feature-settings: "dlig" 1;
+	margin: 0.5em;
+	animation: 2s ease 1 forwards fadeIn;
+}
+p {
+	margin-top: 0;
+}
+a {
+	color: inherit;
+	text-decoration-color: rgba(255, 255, 255, 0.8);
+	transition: color 0.33s linear, text-decoration-color 0.33s linear;
+}
+a:hover {
+	color: #fff;
+	text-decoration-color: rgba(255, 255, 255, 0.95);
+}
+.co {
+	text-transform: uppercase;
+}
+@media screen and (max-width: 960px) {
+	body {
+		font-size: 36px;
+	}
+}
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
