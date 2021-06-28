@@ -21,8 +21,9 @@ body {
 	overscroll-behavior-y: none;
 	animation: 2s ease 1 forwards fadeIn;
 }
-p {
-	margin-top: 0;
+.first-line > * {
+	display: inline;
+	font: inherit;
 }
 a {
 	color: inherit;
