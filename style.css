@@ -17,9 +17,11 @@ body {
 	color: rgba(255, 255, 255, 0.85);
 	font: 60px Scilla, serif;
 	font-feature-settings: "dlig" 1;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
 	margin: 0.5em;
 	overscroll-behavior-y: none;
-	animation: 2s ease 1 forwards fadeIn;
+	animation: 1.4s ease 1 forwards fadeIn;
 }
 .first-line > * {
 	display: inline;
@@ -27,12 +29,14 @@ body {
 }
 a {
 	color: inherit;
-	text-decoration-color: rgba(255, 255, 255, 0.8);
+	text-decoration-color: rgba(255, 255, 255, 0.75);
+	text-decoration-thickness: from-font;
+	text-underline-position: from-font;
 	transition: color 0.33s linear, text-decoration-color 0.33s linear;
 }
 a:hover {
 	color: #fff;
-	text-decoration-color: rgba(255, 255, 255, 0.95);
+	text-decoration-color: rgba(255, 255, 255, 0.9);
 }
 .co {
 	text-transform: uppercase;
