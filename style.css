@@ -11,7 +11,7 @@ html {
 	background: #0f0904;
 	background: #0f0904 -webkit-linear-gradient(330deg, #2e2020, #22110c, #0f0904, #0f0904);
 	background: #0f0904 linear-gradient(330deg, #2e2020, #22110c, #0f0904, #0f0904);
-	height: 100%;
+	min-height: 100%;
 }
 body {
 	color: rgba(255, 255, 255, 0.85);
