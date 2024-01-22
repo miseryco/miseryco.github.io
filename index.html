@@ -1,17 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Misery & Co.</title>
-	<meta name="description" content="Misery & Co. is a development studio specializing in novel mixed-media projects.">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link rel="stylesheet" href="./style.css">
-	<link as="font" href="/scilla-misery-subset.woff2" rel="preload" crossorigin>
-</head>
-<body>
-	<div class="first-line"><h1>Misery & <span class="co">Co.</span></h1> <p>is a group of friends that makes websites, apps, art installations, design systems, hardware prototypes, and toys. We love ambitious creative projects and we work together to realize the dreams we’re fond of.</p></div>
-	<p>We are working on some big projects at the moment, but we’re not supposed to talk about them yet. In the past we have worked with clients like <a href="https://www.nike.com/" target="_blank" rel="noopener noreferrer">Nike</a>, <a href="https://www.mozilla.org/" target="_blank" rel="noopener noreferrer">Mozilla</a>, <a href="https://www.classdojo.com/" target="_blank" rel="noopener noreferrer">ClassDojo</a>, <a href="https://www.holocaustcentre.com/" target="_blank" rel="noopener noreferrer">The Neuberger Holocaust Education Centre</a>, and <a href="https://www.recurse.com/" target="_blank" rel="noopener noreferrer">Recurse Center</a>.</p>
-	<p>For samples of our work, or to inquire about rates and availability, please <a href="mailto:contact@misery.co?subject=Project inquiry">contact us</a>.</p>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Misery &amp; Co.</title>
+		<meta
+			name="description"
+			content="Misery & Co. is a development studio specializing in novel mixed-media projects."
+		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link as="font" href="/scilla-misery-subset.woff2" rel="preload" crossorigin />
+		<style>
+			@font-face {
+				font-family: 'Scilla';
+				src: url('./scilla-misery-subset.woff2') format('woff2'),
+					url('./scilla-misery-subset.woff') format('woff');
+				unicode-range: U+20, U+26, U+2C-2E, U+43, U+44, U+46, U+4D-4F, U+52, U+61-65, U+67, U+69-70, U+72-76,
+					U+78-7A;
+			}
+			html {
+				background-color: #000;
+				background-image: linear-gradient(330deg, #2f0100, #250600, #1b0700, #0c0400, #000, #000);
+				min-height: 100%;
+			}
+			body {
+				color: rgba(255, 255, 255, 0.85);
+				font: 3.75rem Scilla, serif;
+				font-feature-settings: 'dlig' 1;
+				-moz-osx-font-smoothing: grayscale;
+				text-rendering: optimizeLegibility;
+				margin: 0.5em;
+				overscroll-behavior-y: none;
+				animation: 1.4s ease 1 forwards fadeIn;
+			}
+			.first-line > * {
+				display: inline;
+				font: inherit;
+			}
+			a {
+				color: inherit;
+				text-decoration-color: rgba(255, 255, 255, 0.75);
+				text-decoration-thickness: from-font;
+				text-underline-position: from-font;
+				transition: color 0.33s linear, text-decoration-color 0.33s linear;
+			}
+			a:hover {
+				color: #fff;
+				text-decoration-color: rgba(255, 255, 255, 0.9);
+			}
+			.co {
+				text-transform: uppercase;
+			}
+			@media screen and (max-width: 60rem) {
+				body {
+					font-size: 2.25rem;
+				}
+			}
+			@keyframes fadeIn {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="first-line">
+			<h1>Misery &amp; <span class="co">Co.</span></h1>
+			<p>
+				is a group of friends that makes websites, apps, art installations, design systems, hardware prototypes,
+				and toys. We love ambitious creative projects and we work together to realize the dreams we’re fond of.
+			</p>
+		</div>
+		<p>
+			We are working on some big projects at the moment, but we’re not supposed to talk about them yet. In the
+			past we have worked with clients like
+			<a href="https://www.nike.com/" target="_blank" rel="noopener noreferrer">Nike</a>,
+			<a href="https://www.mozilla.org/" target="_blank" rel="noopener noreferrer">Mozilla</a>,
+			<a href="https://www.classdojo.com/" target="_blank" rel="noopener noreferrer">ClassDojo</a>,
+			<a href="https://www.holocaustcentre.com/" target="_blank" rel="noopener noreferrer"
+				>The Neuberger Holocaust Education Centre</a
+			>, and <a href="https://www.recurse.com/" target="_blank" rel="noopener noreferrer">Recurse Center</a>.
+		</p>
+		<p>
+			For samples of our work, or to inquire about rates and availability, please
+			<a href="mailto:contact@misery.co?subject=Project inquiry">contact us</a>.
+		</p>
+	</body>
 </html>
