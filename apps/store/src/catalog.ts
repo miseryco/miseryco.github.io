@@ -48,14 +48,12 @@ export const products: readonly Product[] = [
 		format: 'Mac app',
 		summary: 'A patch editor and librarian for exploring and organizing your JD-08.',
 		media: {
-			kind: 'image', src: workshopImage.src, srcSet: workshopImage.srcSet.attribute, treatment: 'workshop', width: 1200, height: 911,
-			alt: 'Development preview of the JD-08 patch editor, including its envelope controls.',
+			kind: 'image', src: workshopImage.src, srcSet: workshopImage.srcSet.attribute, treatment: 'workshop',
+			width: workshopPreview.width, height: workshopPreview.height,
+			alt: 'JD-08 Toolkit’s patch library beside the synth editor, with Tone A’s filter envelope open.',
 		},
-		status: 'placeholder',
-		details: [
-			'Edit patches, organize banks, and work with the JD-08 from your Mac.',
-			'This is a placeholder listing using a development screenshot. Release details and pricing are not available yet.',
-		],
+		status: 'listed',
+		destination: { href: 'https://misery.co/jd-08-toolkit/', label: 'View product' },
 	},
 	{
 		id: 'quiet-cartographies',
