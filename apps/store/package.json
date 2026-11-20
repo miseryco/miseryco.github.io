@@ -1,0 +1,25 @@
+{
+  "name": "@misery/store",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --ignore-lock",
+    "check": "astro check",
+    "build": "pnpm run check && astro build && node scripts/verify-build.mjs",
+    "preview": "astro preview --port 4174"
+  },
+  "dependencies": {
+    "@astrojs/react": "7.1.2",
+    "@misery/brand": "workspace:*",
+    "@radix-ui/react-tabs": "1.2.1",
+    "astro": "7.4.5",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.12",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0"
+  }
+}

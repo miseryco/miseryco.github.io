@@ -1,0 +1,31 @@
+@import './styles.css';
+
+.not-found-page {
+	box-sizing: border-box;
+	min-height: 100svh;
+	margin: 0;
+	padding: clamp(1.25rem, 4vw, 3.5rem);
+	letter-spacing: -0.035em;
+	color-scheme: dark;
+}
+
+.not-found-page ::selection { color: #000; background: #fff; }
+
+.not-found-header,
+.not-found-content {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	max-width: 80rem;
+	margin-inline: auto;
+}
+
+.not-found-header { font-size: 2rem; }
+.not-found-header a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; }
+.not-found-header a:hover { text-decoration: underline; }
+
+.not-found-content { margin-block: auto; padding-block: 3rem; }
+.not-found-content h1 { margin: 0; font: inherit; line-height: 1.1; text-wrap: balance; }
+.error-code { display: block; margin-bottom: 0.25em; font-size: clamp(5rem, 10vw, 6rem); }
+.not-found-content p { margin-block: 1em 0; }
+.not-found-content a { display: inline-block; min-height: 44px; }

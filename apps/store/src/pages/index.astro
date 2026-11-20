@@ -1,0 +1,44 @@
+---
+import { getImage } from 'astro:assets';
+import StoreLayout from '../layouts/StoreLayout.astro';
+import { Catalog } from '../CatalogView';
+import { products } from '../catalog';
+import swivelOverview from '../assets/swivel-overview.webp';
+
+const title = 'Mac Apps & JD-08 Preset Banks — Misery & Co. Store';
+const description = 'Explore Mac apps and JD-08 preset banks from Misery & Co. Discover Swivel, preview upcoming software and sound collections, and find product details.';
+const socialImage = await getImage({ src: swivelOverview, width: 1200, format: 'png' });
+const canonical = new URL('/', Astro.site).href;
+const structuredData = {
+	'@context': 'https://schema.org',
+	'@type': 'CollectionPage',
+	'@id': canonical,
+	url: canonical,
+	name: title,
+	description,
+	inLanguage: 'en',
+	publisher: { '@type': 'Organization', name: 'Misery & Co.', url: 'https://misery.co/' },
+	mainEntity: {
+		'@type': 'ItemList',
+		itemListElement: products.map((product, index) => ({
+			'@type': 'ListItem', position: index + 1, name: product.name,
+			url: product.status === 'listed' ? product.destination.href : `${canonical}#${product.id}`,
+		})),
+	},
+};
+---
+<StoreLayout title={title} description={description} shareImage={{
+	url: new URL(socialImage.src, Astro.site).href,
+	width: 1200, height: 750,
+	alt: 'Swivel, a Mac app from Misery & Co. for automatic camera switching.',
+}}>
+	<script slot="head" type="application/ld+json" set:html={JSON.stringify(structuredData).replaceAll('<', '\\u003c')} />
+	<section class="introduction" aria-labelledby="page-title">
+		<h1 id="page-title">Store</h1>
+		<p>Mac apps, synth sounds, and other digital goods<br /> from Misery &amp; Co.</p>
+	</section>
+	<section class="catalog" aria-label="Product catalog">
+		<Catalog products={products} client:load />
+		<noscript><p>All products are shown. Enable JavaScript to filter or sort them.</p></noscript>
+	</section>
+</StoreLayout>

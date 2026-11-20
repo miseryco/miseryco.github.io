@@ -1,0 +1,14 @@
+{
+  "name": "@misery/brand",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./background": "./src/background.ts",
+    "./styles.css": "./src/styles.css",
+    "./not-found.css": "./src/not-found.css",
+    "./fonts/site.css": "./fonts/site.css",
+    "./fonts/store.css": "./fonts/store.css"
+  },
+  "dependencies": { "shaderpad": "1.0.0-beta.67" }
+}

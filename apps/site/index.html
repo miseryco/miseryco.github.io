@@ -9,83 +9,8 @@
 		/>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<link as="font" href="/scilla-misery-subset.woff2" rel="preload" crossorigin />
-		<style>
-			@font-face {
-				font-family: 'Scilla';
-				src: url('/scilla-misery-subset.woff2') format('woff2');
-				unicode-range:
-					U+20, U+26, U+2C, U+2E, U+43-46, U+48-49, U+4D-4F, U+52-55, U+57, U+61-77, U+79-7A, U+2019;
-			}
-			html {
-				background-color: #000;
-				min-height: 100%;
-			}
-			body {
-				min-height: 100%;
-				display: flex;
-				flex-direction: column;
-				color: rgba(255, 255, 255, 0.95);
-				font:
-					3.75rem Scilla,
-					serif;
-				font-feature-settings: 'dlig' 1;
-				-moz-osx-font-smoothing: grayscale;
-				text-rendering: optimizeLegibility;
-				margin: 0.5em;
-				padding-block: 1em;
-				overscroll-behavior-y: none;
-				animation: 1.4s ease 1 forwards fadeIn;
-				letter-spacing: -0.05em;
-				text-shadow:
-					0 0 0.05em rgba(255, 255, 255, 0.85),
-					0 0 0.15em rgba(255, 255, 255, 0.4),
-					0 0 0.3em rgba(255, 255, 255, 0.6);
-			}
-			main {
-				position: relative;
-				z-index: 1;
-				margin: auto;
-				max-width: 80rem;
-			}
-			.first-line > * {
-				display: inline;
-				font: inherit;
-			}
-			p {
-				text-wrap: pretty;
-			}
-			a {
-				color: inherit;
-				text-decoration-color: #c4bfbf;
-				text-decoration-thickness: from-font;
-				text-underline-position: from-font;
-				transition:
-					color 0.33s linear,
-					text-decoration-color 0.33s linear;
-			}
-			a:hover {
-				color: #fff;
-				text-decoration-color: #eae6e6;
-			}
-			.co {
-				text-transform: uppercase;
-			}
-			@media screen and (max-width: 60rem) {
-				body {
-					font-size: 2.25rem;
-					padding-block: 0;
-				}
-			}
-			@keyframes fadeIn {
-				0% {
-					opacity: 0;
-				}
-				100% {
-					opacity: 1;
-				}
-			}
-		</style>
+		<link as="font" href="../../packages/brand/fonts/scilla-misery-subset.woff2" type="font/woff2" rel="preload" crossorigin />
+		<link rel="stylesheet" href="/src/style.css" />
 	</head>
 	<body>
 		<main>

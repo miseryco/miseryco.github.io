@@ -1,0 +1,14 @@
+// Store Worker (store.misery.co). This file is at the repository root so
+// Workers Builds, which runs from the root for the workspace lockfile, finds it.
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "misery-store",
+  "compatibility_date": "2026-11-03",
+  "routes": [{ "pattern": "store.misery.co", "custom_domain": true }],
+  "workers_dev": false,
+  "preview_urls": false,
+  "assets": {
+    "directory": "./apps/store/dist",
+    "not_found_handling": "404-page"
+  }
+}

@@ -7,6 +7,10 @@ dist-ssr/
 coverage/
 *.tsbuildinfo
 .vite/
+.astro/
+.wrangler/
+output/
+.playwright-cli/
 
 # Local environment overrides
 .env
@@ -14,6 +18,8 @@ coverage/
 !.env.example
 !.env*.example
 *.local
+.dev.vars
+.dev.vars.*
 
 # Logs
 *.log
@@ -30,3 +36,10 @@ Thumbs.db
 
 # Project-specific local asset
 /fonts/scilla-regular-webfont.ttf
+
+# Maintainer instructions and private business notes; start at .local/README.md.
+/.local/
+
+# Impeccable design context, read from each app's directory. Private; not published.
+PRODUCT.md
+DESIGN.md

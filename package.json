@@ -1,19 +1,29 @@
 {
-  "name": "misery-co",
+  "name": "misery-websites",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "packageManager": "pnpm@12.18.0",
+  "engines": { "node": ">=24 <25" },
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "shaderpad": "1.0.0-beta.67"
+    "dev": "pnpm --filter @misery/store run dev",
+    "dev:site": "pnpm --filter @misery/site run dev",
+    "dev:store": "pnpm --filter @misery/store run dev",
+    "check": "pnpm run check:site && pnpm run check:store",
+    "check:site": "pnpm --filter @misery/site run check",
+    "check:store": "pnpm --filter @misery/store run check",
+    "build": "pnpm run build:site && pnpm run build:store",
+    "build:site": "pnpm --filter @misery/site run build",
+    "build:store": "pnpm --filter @misery/store run build",
+    "preview:site": "pnpm --filter @misery/site run preview",
+    "preview:store": "pnpm --filter @misery/store run preview",
+    "deploy:store": "pnpm run build:store && wrangler deploy",
+    "validate:cloudflare": "wrangler deploy --dry-run --config apps/site/wrangler.jsonc && wrangler deploy --dry-run",
+    "fonts:subset": "python3 scripts/subset-fonts.py"
   },
   "devDependencies": {
-    "typescript": "^5.9.3",
-    "vite": "^7.3.1",
-    "vite-plugin-glsl": "^1.5.6"
+    "typescript": "5.9.3",
+    "vite": "8.3.5",
+    "wrangler": "4.157.0"
   }
 }

@@ -1,0 +1,14 @@
+@import '@misery/brand/fonts/site.css';
+@import '@misery/brand/styles.css';
+
+main {
+	position: relative;
+	z-index: 1;
+	margin: auto;
+	max-width: 80rem;
+}
+
+.first-line > * {
+	display: inline;
+	font: inherit;
+}

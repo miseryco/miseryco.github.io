@@ -4,6 +4,7 @@
 		"useDefineForClassFields": true,
 		"module": "ESNext",
 		"lib": ["ES2020", "DOM", "DOM.Iterable"],
+		"types": ["vite/client"],
 		"skipLibCheck": true,
 		"moduleResolution": "bundler",
 		"allowImportingTsExtensions": true,
@@ -15,6 +16,5 @@
 		"noUnusedParameters": true,
 		"noFallthroughCasesInSwitch": true,
 		"noUncheckedSideEffectImports": true
-	},
-	"include": ["src"]
+	}
 }

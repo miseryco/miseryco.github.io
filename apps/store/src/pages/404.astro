@@ -1,0 +1,29 @@
+---
+import '@misery/brand/fonts/store.css';
+import '@misery/brand/not-found.css';
+import fontUrl from '../../../../packages/brand/fonts/scilla-store-subset.woff2?url';
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>404 — Misery &amp; Co.</title>
+		<meta name="description" content="This page could not be found. Return to the Misery & Co. store." />
+		<meta name="robots" content="noindex" />
+		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+		<link rel="preload" href={fontUrl} as="font" type="font/woff2" crossorigin />
+	</head>
+	<body class="not-found-page">
+		<header class="not-found-header">
+			<a href="https://misery.co/">Misery &amp; <span class="co">Co.</span></a>
+		</header>
+		<main class="not-found-content">
+			<h1><span class="error-code">404</span></h1>
+			<p>This page could not be found.<br /><a href="/">Return to store</a></p>
+		</main>
+		<script>
+			import '../background';
+		</script>
+	</body>
+</html>

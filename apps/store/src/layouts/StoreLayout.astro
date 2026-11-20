@@ -1,0 +1,61 @@
+---
+import '../style.css';
+import fontUrl from '../../../../packages/brand/fonts/scilla-store-subset.woff2?url';
+
+interface Props {
+	title: string;
+	description: string;
+	noindex?: boolean;
+	skipLinkLabel?: string;
+	shareImage?: { url: string; width: number; height: number; alt: string };
+}
+
+const { title, description, noindex = false, skipLinkLabel = 'Skip to products', shareImage } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		{noindex ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={canonical} />}
+		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+		<link rel="preload" href={fontUrl} as="font" type="font/woff2" crossorigin />
+		<meta name="theme-color" content="#1d0f10" />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Misery & Co." />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonical} />
+		<meta property="og:locale" content="en_CA" />
+		<meta name="twitter:card" content={shareImage ? 'summary_large_image' : 'summary'} />
+		{shareImage && <>
+			<meta property="og:image" content={shareImage.url} />
+			<meta property="og:image:width" content={String(shareImage.width)} />
+			<meta property="og:image:height" content={String(shareImage.height)} />
+			<meta property="og:image:alt" content={shareImage.alt} />
+			<meta name="twitter:image:alt" content={shareImage.alt} />
+		</>}
+		<slot name="head" />
+	</head>
+	<body>
+		<a class="skip-link" href="#main">{skipLinkLabel}</a>
+		<header class="site-header">
+			<a class="wordmark" href="https://misery.co/">Misery &amp; <span class="co">Co.</span></a>
+			<nav class="site-nav" aria-label="Main navigation">
+				<a href="/" aria-current={!noindex ? 'page' : undefined}>Store</a>
+				<a href="mailto:contact@misery.co?subject=Store%20inquiry">Contact</a>
+			</nav>
+		</header>
+		<main id="main" tabindex="-1"><slot /></main>
+		<footer class="site-footer">
+			<a href="https://misery.co/">Visit the studio</a>
+			<p>Questions about a product? <a href="mailto:contact@misery.co?subject=Store%20inquiry">Get in touch</a></p>
+		</footer>
+		<script>
+			import '../background';
+		</script>
+	</body>
+</html>

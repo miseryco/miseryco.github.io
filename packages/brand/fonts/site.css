@@ -1,0 +1,10 @@
+/* Generated from the matching font's actual Unicode cmap. */
+@font-face {
+  font-family: 'Scilla';
+  src: url('./scilla-misery-subset.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  font-feature-settings: 'dlig' 1;
+  unicode-range: U+0020, U+0026, U+002C, U+002E, U+0030, U+0034, U+0043-0046, U+0048-0049, U+004D-0050, U+0052-0055, U+0057, U+0061-0077, U+0079-007A, U+2019;
+}
