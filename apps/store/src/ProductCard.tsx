@@ -52,7 +52,7 @@ export function ProductCard({ product }: { product: Product }) {
 						<ProductArtwork product={product} />
 					</a>
 				) : <ProductArtwork product={product} />}
-				{product.status === 'placeholder' ? <span className="placeholder-label">Placeholder</span> : null}
+				{product.status === 'placeholder' ? <span className="placeholder-label">Coming soon</span> : null}
 			</div>
 			<div className="product-body">
 				<h2 id={`${product.id}-name`}>{product.name}</h2>

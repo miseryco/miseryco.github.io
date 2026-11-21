@@ -16,7 +16,7 @@ Edit `src/catalog.ts`, the build-only source of truth for products and image pro
 - Preset bank: `category: 'presets'`.
 - A future sticker or other physical item: `category: 'goods'`. The Physical goods filter appears as soon as that category has an entry. Add its photo with `media.kind: 'image'` and `treatment: 'photo'`.
 - `status: 'listed'` requires a real external `destination` link; this status does not assert checkout availability.
-- `status: 'placeholder'` requires inline `details` and displays a placeholder label. It never renders a purchase control.
+- `status: 'placeholder'` requires inline `details` and displays the “Coming soon” tag. It never renders a purchase control.
 
 The media union supports supplied images or temporary typographic preset covers. Keep artwork descriptive and use actual dimensions and alt text for images. For copy introducing new characters in Scilla headings, follow the root README's font-regeneration instructions.
 

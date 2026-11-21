@@ -66,10 +66,7 @@ export function Catalog({ products }: { products: readonly Product[] }) {
 					</select>
 				</label>
 			</div>
-			<div className="catalog-context">
-				<p role="status" aria-live="polite">{visibleProducts.length} {visibleProducts.length === 1 ? 'item' : 'items'}</p>
-				<p>Placeholder items aren’t for sale.</p>
-			</div>
+			<p className="catalog-context" role="status" aria-live="polite">{visibleProducts.length} {visibleProducts.length === 1 ? 'item' : 'items'}</p>
 			{filters.map(filter => (
 				<Tabs.Content key={filter.id} value={filter.id} className="catalog-panel">
 					{view.category === filter.id ? (

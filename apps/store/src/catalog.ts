@@ -16,7 +16,7 @@ export const products: readonly Product[] = [
 		id: 'swivel',
 		name: 'Swivel',
 		category: 'apps',
-		format: 'macOS 14+',
+		format: 'Mac app',
 		summary: 'Automatic camera switching. Look at a camera, and Swivel switches to it.',
 		media: {
 			kind: 'image', src: swivelImage.src, srcSet: swivelImage.srcSet.attribute, treatment: 'swivel', width: 1440, height: 900,
@@ -32,8 +32,9 @@ export const products: readonly Product[] = [
 		format: 'Mac app',
 		summary: 'Turn audio files, software instruments, and MIDI hardware into sample libraries.',
 		media: {
-			kind: 'image', src: syphonImage.src, srcSet: syphonImage.srcSet.attribute, treatment: 'syphon', width: 580, height: 780,
-			alt: 'Development preview of Syphon’s Input, Notes and Output controls.',
+			kind: 'image', src: syphonImage.src, srcSet: syphonImage.srcSet.attribute, treatment: 'syphon',
+			width: syphonPreview.width, height: syphonPreview.height,
+			alt: 'Syphon’s loop editor showing the attack and a 2.41-second sustain loop on a sampled Dexed C4.',
 		},
 		status: 'listed',
 		destination: { href: 'https://misery.co/syphon/', label: 'View product' },
@@ -62,7 +63,7 @@ export const products: readonly Product[] = [
 		status: 'placeholder',
 		details: [
 			'A collection of 24 ambient presets for the Roland JD-08.',
-			'This is a placeholder for a future preset-bank listing. The final download format, price, and installation instructions are still to be confirmed.',
+			'The final download format, price, and installation instructions are still to be confirmed.',
 		],
 	},
 	{
@@ -75,7 +76,7 @@ export const products: readonly Product[] = [
 		status: 'placeholder',
 		details: [
 			'24 JD-08 sounds built from four tones, with individually voiced progressions in the source collection.',
-			'This is a placeholder for a future preset-bank listing. The final download format, price, and installation instructions are still to be confirmed.',
+			'The final download format, price, and installation instructions are still to be confirmed.',
 		],
 	},
 	{
@@ -88,7 +89,7 @@ export const products: readonly Product[] = [
 		status: 'placeholder',
 		details: [
 			'A collection of 24 four-tone pads in six families for the Roland JD-08.',
-			'This is a placeholder for a future preset-bank listing. The final download format, price, and installation instructions are still to be confirmed.',
+			'The final download format, price, and installation instructions are still to be confirmed.',
 		],
 	},
 ];
