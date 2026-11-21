@@ -35,11 +35,8 @@ export const products: readonly Product[] = [
 			kind: 'image', src: syphonImage.src, srcSet: syphonImage.srcSet.attribute, treatment: 'syphon', width: 580, height: 780,
 			alt: 'Development preview of Syphon’s Input, Notes and Output controls.',
 		},
-		status: 'placeholder',
-		details: [
-			'Syphon is a Mac app for generating samples from audio files, AU/VST3 instruments, and MIDI hardware.',
-			'This is a placeholder listing using a development screenshot. Release details and pricing are not available yet.',
-		],
+		status: 'listed',
+		destination: { href: 'https://misery.co/syphon/', label: 'View product' },
 	},
 	{
 		id: 'jd08-workshop',
